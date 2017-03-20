@@ -30,7 +30,6 @@ angular.module('FlyApp')
 				console.log(err);
 				return null
 			})
-			console.log('STUB');
 		},
 		updatePlane: function(plane){
 			console.log('STUB');

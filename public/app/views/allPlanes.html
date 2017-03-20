@@ -1,8 +1,9 @@
 <h2>{{ title }}</h2>
+ <input type="text" class="form-control input-text" ng-model='searchTerm' placeholder="Search Plane">
 <hr>
 <p ng-hide='planes'>LOADING PLANES YA'LL....</p>
 <div class="row">
-	<div id="planeWell" class="col-md-4 well" ng-repeat='p in planes'>
+	<div id="planeWell" class="col-md-4 well" ng-repeat='p in planes | filter:searchTerm'>
 			<h3><strong>{{p.manufacturer}}</strong></h3>
 			<h5>{{p.model}}</h5>
 			<img ng-src='{{p.imageUrl}}'><br>
@@ -10,3 +11,4 @@
 			<a ng-controller='DeleteCtrl' class="btn btn-danger" href="/delete/{{p._id}}" ng-submit='delete()'>Delete</a>
 	</div>
 </div>
+
