@@ -34,4 +34,4 @@ ToDO
 - create Delete route - DONE
 - create Create route - DONE
 - create Search Bar that Filters planes
-- each plane should have an image
+- each plane should have an image - DONE

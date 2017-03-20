@@ -3,6 +3,16 @@ body{
 	padding-top: 50px;
 	background-color: white;
 }
+img {
+  max-width:300px;
+  max-height:300px;
+  width: auto;
+  height: auto;
+}
+#planeWell{
+    width:33%;
+    height:500px;  
+}
 iframe{
 	margin: 0;
 	padding: 0;

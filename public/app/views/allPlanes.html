@@ -1,11 +1,12 @@
 <h2>{{ title }}</h2>
 <hr>
 <p ng-hide='planes'>LOADING PLANES YA'LL....</p>
-
-<div ng-repeat='p in planes'>
-	<h3><strong>{{p.manufacturer}}</strong></h3>
-	<h5>{{p.model}}</h5>
-	<img ng-src='{{p.image}}'><br>
-	<a class="btn btn-default" href="/plane/{{p._id}}">Details</a>
-	<a ng-controller='DeleteCtrl' class="btn btn-danger" href="/delete/{{p._id}}" ng-submit='delete()'>Delete</a>
+<div class="row">
+	<div id="planeWell" class="col-md-4 well" ng-repeat='p in planes'>
+			<h3><strong>{{p.manufacturer}}</strong></h3>
+			<h5>{{p.model}}</h5>
+			<img ng-src='{{p.imageUrl}}'><br>
+			<a class="btn btn-default" href="/plane/{{p._id}}">Details</a>
+			<a ng-controller='DeleteCtrl' class="btn btn-danger" href="/delete/{{p._id}}" ng-submit='delete()'>Delete</a>
+	</div>
 </div>

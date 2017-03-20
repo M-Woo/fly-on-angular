@@ -1,10 +1,12 @@
+<div class="well">
 <h1>{{plane.model}}</h1>
 <h3>{{ plane.manufacturer }}</h3>
 
 <div>
-	<img ng-src='{{plane.image}}'><br>
+	<img ng-src='{{plane.imageUrl}}'><br>
 </div>
 
 <h3>Did you know this plane has {{plane.engines | fixGrammar}} !</h3>
 
 <a href="/allPlanes" class="btn btn-primary">Back</a>
+</div>

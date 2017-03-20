@@ -11,6 +11,11 @@ angular.module('FlyApp')
 		console.log('error', err);
 	})
 }])
+.controller('SearchCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
+	$scope.search = function (){
+		
+	}
+}])
 .controller('DetailCtrl', ['$scope', '$stateParams', 'PlanesAPI', function($scope, $stateParams, PlanesAPI) {
 	$scope.plane = {};
 
@@ -40,7 +45,7 @@ angular.module('FlyApp')
 			'manufacturer': this.manufacturer,
 			'model': this.model,
 			'engines': this.engines,
-			'url': this.url
+			'imageUrl': this.imageUrl
 		}
 		PlanesAPI.addPlane(plane)
 		// .then(function success(res){
@@ -50,9 +55,6 @@ angular.module('FlyApp')
 		// })
 	}
 }])
-
-
-
 .filter('fixGrammar', function(){
 	return function(input){
 		if(input == 1){
