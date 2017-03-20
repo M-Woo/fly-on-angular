@@ -1,0 +1,11 @@
+<h2>{{ title }}</h2>
+<hr>
+<p ng-hide='planes'>LOADING PLANES YA'LL....</p>
+
+<div ng-repeat='p in planes'>
+	<h3><strong>{{p.manufacturer}}</strong></h3>
+	<h5>{{p.model}}</h5>
+	<img ng-src='{{p.image}}'><br>
+	<a href="/plane/{{p._id}}">Details</a>
+	<a href="/delete/{{p._id}}" ngclick=''>Delete</a>
+</div>

@@ -27,3 +27,11 @@ Using the Airplanes API starter, create an Angular CRUD app that does the follow
 * Instead of displaying every airplane, add pagination to the application
   * This will involve accessing `req.query` and limit/offset
   * This *may* involve altering the search bar
+
+
+ToDO
+
+- create Delete route - DONE
+- create Create route - DONE
+- create Search Bar that Filters planes
+- each plane should have an image

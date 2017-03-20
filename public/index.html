@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app='FlyApp'>
+<head>
+	<title>Angular and Express</title>
+	<base href='/''>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	<script type='text/javascript' src="app/main.js"></script>
+	<script type="text/javascript" src='app/controllers.js'></script>
+	<script type="text/javascript" src='app/factories.js'></script>
+</head>
+<body>
+	<div class="container text-center">
+	<nav class="navbar navbar-inverse navbar-fixed-top navbar-">
+		<div class="navbar-header">
+	      <a class="navbar-brand" href="/"><strong>The Plane Game</strong></a>
+	    </div>
+			<ul class="nav navbar-nav text-center">
+				<li><a href="/">Home</a></li>
+				<li><a href="/#/about">About</a></li>
+				<li><a href="/#/create">Create</a></li>
+				<li><a href="/#/allPlanes">Planes</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		<form class="navbar-form navbar-left" ng-submit='search()'>
+		  <div class="input-group">
+		    <input type="text" class="form-control input-text" ng-model='searchTerm' ng-submit='search()' placeholder="Search Film">
+		    <div class="input-group-btn">
+		      <button class="btn btn-default" type="submit" type="submit">
+		        <i class="glyphicon glyphicon-search" type="submit"></i>
+		      </button>
+		    </div>
+		  </div>
+		</form>
+	</nav>
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
